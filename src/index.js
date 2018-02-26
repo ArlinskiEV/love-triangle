@@ -9,7 +9,8 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
   let checked = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if (i === arr[arr[arr[i]]]) {
+    if ((i === arr[arr[arr[i]]]) && 
+    ((i !== arr[i])&&( arr[i] !== arr[arr[i]])&&(i !== arr[arr[i]]))) {
       let triangle = [i, arr[i], arr[arr[i]]].sort().join('-');
       if (checked.indexOf(triangle) === -1) {
         checked.push(triangle);
